@@ -11,4 +11,4 @@ coverage/
 Thumbs.db
 out/
 *.log
-*-profile/
+/out/*-profile/

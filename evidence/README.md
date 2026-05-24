@@ -1,10 +1,9 @@
-# Workflow Proof Images
+# Workflow Images
 
 All screenshots in this folder come from fictional test artifacts.
 
-These images show the practical difference between routes:
+These images document the practical effect of changing the working context:
 
-- `baseline-vanilla/` shows the same fictional prompt sent to Gemini CLI without this scaffold or profile context.
-- `baseline-1818/` and `baseline-1848/` show earlier instructed routes before the app-first scaffold was stabilized.
+- `baseline-1818/` and `baseline-1848/` show near-baseline development snapshots before the app-first route was stable.
 - `final-0003/` shows the app-first scaffold and packaging route, including interaction-state proof.
-- The images are documentation proof for the workflow.
+- The images are public-safe documentation for the workflow.

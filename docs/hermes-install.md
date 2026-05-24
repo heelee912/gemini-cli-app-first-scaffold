@@ -2,7 +2,7 @@
 
 This repository can be used beside Hermes WebUI without modifying Hermes core.
 
-## Option A: Install The Profile
+## Install The Profile
 
 Run:
 
@@ -30,7 +30,7 @@ The important files are:
 - `prompt-seeds/`
 - `source-prompts/README.md`
 
-## Option B: Use As An External Runner
+## Use As An External Runner
 
 Keep this repository separate and call its scripts from Hermes tasks:
 
@@ -50,6 +50,21 @@ python /path/to/gemini-build-parity-scaffold/scripts/create_build_like_web_app.p
 
 Then ensure the Gemini worker executes from `/path/to/artifact`, not from the
 repository root.
+
+## Suggested Hermes Main-Agent Instruction
+
+Use this shape when delegating a visual web artifact:
+
+```text
+Use the build-parity-design-director profile.
+Create the artifact workspace with run_gemini_design_once.py.
+Run Gemini from inside the generated artifact workspace.
+Do not ask Gemini to answer with a single HTML file first.
+After the app is edited, return the runnable source path and standalone.html path.
+```
+
+This repository provides the profile and runner. Hermes remains responsible for
+goal orchestration, task tracking, and deciding when to call the runner.
 
 ## Browser Use
 
