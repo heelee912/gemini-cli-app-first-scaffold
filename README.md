@@ -128,11 +128,16 @@ These examples use a fictional candidate. They are not about a real person.
 
 | Run | Route | Evidence |
 | --- | --- | --- |
-| Baseline 1830 | Direct/simple HTML-oriented Gemini run | ![Baseline 1830 desktop](evidence/baseline-1830/desktop-fullpage.png) |
-| Baseline 1840 | Early universal rules route | ![Baseline 1840 desktop](evidence/baseline-1840/desktop-fullpage.png) |
+| Vanilla Gemini CLI | Same fictional prompt, no scaffold, no `GEMINI.md`, no source prompt context | ![Vanilla desktop](evidence/baseline-vanilla/desktop-fullpage.png) |
+| Early 1818 route | Early instructed run before the app-first scaffold was stabilized | ![1818 desktop](evidence/baseline-1818/desktop-fullpage.png) |
+| Early 1848 route | Early visible-first-paint rule set, still static-output oriented | ![1848 desktop](evidence/baseline-1848/desktop-fullpage.png) |
 | Final 0003 | App-first scaffold, design kernel, standalone packaging | ![Final 0003 desktop](evidence/final-0003/desktop-fullpage.png) |
 
 These screenshots are proof of the execution route. They show why the repository exists: the scaffolded app-first route gives the model a stronger working environment than a plain static-output request.
+
+The final route also preserves interactive state:
+
+![Final 0003 interaction demo](evidence/final-0003/interaction-demo.gif)
 
 ## Publication Boundary
 
