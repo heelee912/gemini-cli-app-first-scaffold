@@ -179,6 +179,7 @@ The scaffold copies that folder into every generated artifact so Gemini can read
 This repository follows the broader idea of scaffolding: surround the model with workspace structure, tools, instructions, state, and execution feedback instead of relying on a single prompt.
 
 - [Inside the Scaffold: A Source-Code Taxonomy of Coding Agent Architectures](https://arxiv.org/abs/2604.03515)
+- [app.build: A Production Framework for Scaling Agentic Prompt-to-App Generation with Environment Scaffolding](https://arxiv.org/abs/2509.03310)
 - [BISCUIT: Scaffolding LLM-Generated Code with Ephemeral UIs in Computational Notebooks](https://machinelearning.apple.com/research/biscuit-scaffolding-llm)
 - [TableTalk: Scaffolding Spreadsheet Development with a Language Agent](https://www.microsoft.com/en-us/research/publication/tabletalk-scaffolding-spreadsheet-development-with-a-language-agent/)
 

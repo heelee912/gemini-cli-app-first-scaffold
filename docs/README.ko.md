@@ -174,6 +174,7 @@ scaffold는 이 폴더를 생성되는 모든 artifact에 복사하므로 Gemini
 이 저장소는 단일 프롬프트에 기대는 대신 workspace 구조, 도구, 지침, 상태, 실행 feedback으로 모델을 둘러싸는 scaffolding 아이디어와 연결됩니다.
 
 - [Inside the Scaffold: A Source-Code Taxonomy of Coding Agent Architectures](https://arxiv.org/abs/2604.03515)
+- [app.build: A Production Framework for Scaling Agentic Prompt-to-App Generation with Environment Scaffolding](https://arxiv.org/abs/2509.03310)
 - [BISCUIT: Scaffolding LLM-Generated Code with Ephemeral UIs in Computational Notebooks](https://machinelearning.apple.com/research/biscuit-scaffolding-llm)
 - [TableTalk: Scaffolding Spreadsheet Development with a Language Agent](https://www.microsoft.com/en-us/research/publication/tabletalk-scaffolding-spreadsheet-development-with-a-language-agent/)
 
