@@ -4,6 +4,24 @@ Local scaffold and instruction kernel for pushing Gemini CLI or Hermes design wo
 
 This repository is not a fork of Hermes WebUI and is not affiliated with Google AI Studio. It is a standalone workflow package: create an app-first Vite/React/Tailwind workspace, give the design model a Build-like execution context, verify real browser rendering, then optionally package the built app into a direct-open single HTML file.
 
+## Multilingual Overview
+
+### English
+
+This project turns a plain Gemini CLI design request into an app-first workflow. It creates a Vite, React, TypeScript, and Tailwind workspace, places the design kernel and scaffold context where Gemini can read them, runs Gemini inside that workspace, then builds and optionally packages the result as standalone HTML.
+
+### 한국어
+
+이 프로젝트는 Gemini CLI 디자인 요청을 단순 HTML 생성이 아니라 앱 우선 워크플로로 바꿉니다. Vite, React, TypeScript, Tailwind 작업 공간을 만들고, Gemini가 읽을 수 있는 위치에 디자인 커널과 스캐폴드 문맥을 배치한 뒤, 그 작업 공간 안에서 Gemini를 실행하고 빌드 및 단일 HTML 패키징까지 진행합니다.
+
+### 日本語
+
+このプロジェクトは、Gemini CLI へのデザイン依頼を単なる HTML 生成ではなく、アプリ優先のワークフローに変換します。Vite、React、TypeScript、Tailwind の作業環境を作成し、Gemini が読める場所にデザインカーネルとスキャフォールド文脈を配置し、その作業環境内で Gemini を実行して、ビルドと必要に応じた単一 HTML へのパッケージ化を行います。
+
+### 中文
+
+本项目把 Gemini CLI 的设计请求从简单的 HTML 生成提升为应用优先的工作流。它会创建 Vite、React、TypeScript 和 Tailwind 工作区，把设计内核和脚手架上下文放到 Gemini 可以读取的位置，然后在该工作区内运行 Gemini，完成构建，并在需要时打包为可直接打开的单文件 HTML。
+
 ## Why This Exists
 
 Directly asking a model for a single HTML file often collapses rich interface work into a static page. The stronger route is:
