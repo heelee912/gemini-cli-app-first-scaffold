@@ -51,12 +51,12 @@ python /path/to/gemini-build-parity-scaffold/scripts/create_build_like_web_app.p
 Then ensure the Gemini worker executes from `/path/to/artifact`, not from the
 repository root.
 
-## Browser Verification
+## Browser Use
 
-For local artifacts, CDP screenshots are optional evidence helpers:
+This repository does not ship a browser-control backend. Use the browser tools
+already available in your agent environment to open the generated
+`standalone.html` or Vite preview.
 
-```bash
-node /path/to/gemini-build-parity-scaffold/scripts/capture_chrome_cdp_fullpage.mjs "file:///absolute/path/to/standalone.html" /path/to/captures --settle-ms 5000
-```
-
-For logged-in real browser tabs, use your environment's official browser-control backend and follow its tab-claiming rules. Do not mix local preview verification with account-page automation.
+For logged-in real browser tabs, use your environment's official browser-control
+backend and follow its tab-claiming rules. Do not mix local preview checks with
+account-page automation.
