@@ -9,7 +9,7 @@ This workflow does not assign automatic design scores.
 - TypeScript lint passes.
 - The app builds.
 - Standalone packaging preserves the built app.
-- Chrome can capture desktop and 390px mobile full-page screenshots.
+- Chrome or the user's own browser automation can capture desktop and 390px mobile full-page screenshots.
 - Key interaction states are reachable when the brief needs them.
 
 ## What The Human Judges
@@ -27,7 +27,7 @@ This workflow does not assign automatic design scores.
 - The app has many controls that do not help the audience inspect, compare, export, navigate, or decide.
 - The first screenshot is blank because critical content was hidden behind reveal animation.
 - The direct `dist/index.html` shell is mistaken for a direct-open final artifact. Use `standalone.html` packaging instead.
-- The Chrome command-line screenshot path produces a false blank image. Prefer CDP full-page capture.
+- The Chrome command-line screenshot path can produce a false blank image. Prefer CDP full-page capture or the user's existing browser automation.
 
 ## Repair Policy
 

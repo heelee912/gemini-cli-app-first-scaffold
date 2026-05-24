@@ -32,7 +32,29 @@ The goal is not to hardcode one visual style. The scaffold supplies execution sh
 | `docs/evaluation-protocol.md` | Explains evidence-based visual review without fake pass/fail scoring. |
 | `evidence/` | Public-safe screenshot comparison from fictional test artifacts. |
 
-## Quick Start
+## Quick Start: Full One-Shot Route
+
+If the official Gemini CLI is installed and logged in, this is the intended
+drop-in command:
+
+```powershell
+cd C:\path\to\gemini-build-parity-scaffold
+python scripts\run_gemini_design_once.py out\fictional-profile --name "Fictional Profile" --brief-file examples\fictional-recruiter-profile\brief.md --force
+```
+
+What this does:
+
+1. Creates the app-first scaffold.
+2. Copies `profile/GEMINI.md`, `design_skills/`, `prompt-seeds/`, and `source-prompts/` into the artifact workspace.
+3. Runs Gemini CLI inside that workspace, so the local `GEMINI.md` and copied context files are visible to the worker.
+4. Runs `npm install`, `npm run lint`, and `npm run build`.
+5. Packages `dist` into `standalone.html`.
+
+The scaffold benefit is only fully active when Gemini runs inside the generated
+artifact folder. Running Gemini from another directory and merely pasting the
+brief will not reproduce the same setup.
+
+## Manual Scaffold Route
 
 ```powershell
 cd C:\path\to\gemini-build-parity-scaffold
@@ -52,6 +74,35 @@ cd ..\..
 python scripts\package_vite_dist_single_html.py out\fictional-profile\dist out\fictional-profile\standalone.html
 node scripts\capture_chrome_cdp_fullpage.mjs "file:///C:/path/to/gemini-build-parity-scaffold/out/fictional-profile/standalone.html" out\fictional-profile\captures --settle-ms 5000
 ```
+
+The Chrome CDP capture script is optional. It exists only to make screenshot
+evidence reproducible for users who do not already have browser automation in
+their agent environment. If your agent can open the local artifact and capture
+desktop/mobile screenshots, use that instead.
+
+## Hermes Installation
+
+Install the profile into a Hermes home directory:
+
+```powershell
+python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home --profile design --force
+```
+
+This copies the profile to:
+
+```text
+<hermes-home>\profiles\design\skills\build-parity-design-director
+```
+
+Hermes still needs an agent or task runner that calls either:
+
+```powershell
+python scripts\run_gemini_design_once.py <artifact-root> --name "<artifact name>" --brief-file <brief.md> --force
+```
+
+or the manual scaffold route above. The install script gives Hermes the skill
+and instruction context; the run script gives Gemini the prepared artifact
+workspace.
 
 ## Evidence Snapshot
 

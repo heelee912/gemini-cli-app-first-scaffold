@@ -21,6 +21,14 @@ Before generating or editing the artifact, read and follow the sibling file:
 
 ## Scaffold Command
 
+Preferred one-shot command when Gemini CLI is installed:
+
+```bash
+python scripts/run_gemini_design_once.py out/my-artifact --name "My Artifact" --brief-file brief.md --force
+```
+
+Manual scaffold command:
+
 ```bash
 python scripts/create_build_like_web_app.py out/my-artifact --name "My Artifact" --brief-file brief.md --force
 ```
@@ -35,6 +43,8 @@ python scripts/package_vite_dist_single_html.py out/my-artifact/dist out/my-arti
 ```
 
 ## Screenshot Command
+
+This is optional when the host agent already has browser capture tools.
 
 ```bash
 node scripts/capture_chrome_cdp_fullpage.mjs "file:///absolute/path/to/standalone.html" out/my-artifact/captures --settle-ms 5000
