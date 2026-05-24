@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check app-like project shape without scoring visual quality."""
+"""Check app-like project shape."""
 
 from __future__ import annotations
 

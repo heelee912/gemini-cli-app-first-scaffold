@@ -1,8 +1,8 @@
-# Evaluation Protocol
+# Render Evidence
 
-This workflow does not assign automatic design scores.
+This document describes how to collect reproducible proof that a generated artifact actually builds, packages, and renders.
 
-## What The Agent Verifies
+## What The Agent Checks
 
 - The project has app-like structure.
 - Dependencies install.
@@ -12,13 +12,12 @@ This workflow does not assign automatic design scores.
 - Chrome or the user's own browser automation can capture desktop and 390px mobile full-page screenshots.
 - Key interaction states are reachable when the brief needs them.
 
-## What The Human Judges
+## What The Screenshots Are For
 
-- Visual quality.
-- Taste.
-- Whether the artifact feels like a product surface rather than a page.
-- Whether the result is close enough to the target benchmark.
-- Whether a revision loop should continue.
+- Show that the artifact is not a blank shell.
+- Show the difference between a plain route and the scaffolded route.
+- Provide PR and README proof without exposing private local files.
+- Help the maintainer decide which screenshots should be published.
 
 ## Common Failure Modes
 
@@ -31,4 +30,4 @@ This workflow does not assign automatic design scores.
 
 ## Repair Policy
 
-Repair build, render, packaging, mobile clipping, and concrete interaction defects. Do not flatten a promising visual direction to satisfy arbitrary counts or metric gates.
+Repair build, render, packaging, mobile clipping, and concrete interaction defects. Do not flatten a promising visual direction to satisfy arbitrary counts.

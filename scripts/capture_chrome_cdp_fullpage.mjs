@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 // Capture full-page desktop and mobile screenshots through Chrome DevTools Protocol.
-// This is screenshot evidence only. It does not score the design.
 
 import { mkdir, rm, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";

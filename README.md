@@ -46,9 +46,9 @@ The goal is not to hardcode one visual style. The scaffold supplies execution sh
 | `scripts/create_build_like_web_app.py` | Creates the Vite/React/Tailwind scaffold. |
 | `scripts/package_vite_dist_single_html.py` | Inlines Vite `dist` assets into one browser-openable HTML file. |
 | `scripts/capture_chrome_cdp_fullpage.mjs` | Captures desktop and 390px mobile full-page screenshots through Chrome CDP. |
-| `scripts/check_project_structure.py` | Confirms app-like project shape without scoring design quality. |
-| `docs/evaluation-protocol.md` | Explains evidence-based visual review without fake pass/fail scoring. |
-| `evidence/` | Public-safe screenshot comparison from fictional test artifacts. |
+| `scripts/check_project_structure.py` | Confirms app-like project shape. |
+| `docs/render-evidence.md` | Explains how to capture reproducible render proof for generated artifacts. |
+| `evidence/` | Public-safe screenshots showing the workflow difference on fictional test artifacts. |
 
 ## Quick Start: Full One-Shot Route
 
@@ -122,7 +122,7 @@ or the manual scaffold route above. The install script gives Hermes the skill
 and instruction context; the run script gives Gemini the prepared artifact
 workspace.
 
-## Evidence Snapshot
+## Workflow Proof Snapshot
 
 These examples use a fictional candidate. They are not about a real person.
 
@@ -132,7 +132,7 @@ These examples use a fictional candidate. They are not about a real person.
 | Baseline 1840 | Early universal rules route | ![Baseline 1840 desktop](evidence/baseline-1840/desktop-fullpage.png) |
 | Final 0003 | App-first scaffold, design kernel, standalone packaging | ![Final 0003 desktop](evidence/final-0003/desktop-fullpage.png) |
 
-The repository does not claim an automatic design score. The evidence exists so humans can compare rendered output and decide whether the workflow is improving the artifact.
+These screenshots are proof of the execution route. They show why the repository exists: the scaffolded app-first route gives the model a stronger working environment than a plain static-output request.
 
 ## Publication Boundary
 

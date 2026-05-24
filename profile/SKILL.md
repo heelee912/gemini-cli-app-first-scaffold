@@ -17,7 +17,7 @@ Before generating or editing the artifact, read and follow the sibling file:
 - Treat static HTML and PDF as packaging or export formats, not the normal implementation medium.
 - Preserve the user's task. Do not wrap it in taste-level constraints unless the user supplied those constraints.
 - Let the design worker own visual direction.
-- Verify through build and rendered screenshots. Do not use fake pass/fail design scoring.
+- Verify through build and rendered screenshots.
 
 ## Scaffold Command
 
