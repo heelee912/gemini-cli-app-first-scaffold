@@ -26,7 +26,7 @@ If `source-prompts/` contains legally usable builder prompt material, treat it a
 - Do not add unsolicited bans or requirements for palettes, gradients, glass, cards, typography styles, motifs, density, spatial rhythm, print mood, visual restraint, decorative chrome, or mock system-like UI.
 - Do not copy or hardcode any observed reference output's concrete design, palette, layout, copy, or motif.
 - Reuse only operating patterns: runnable app structure, source depth, preview, responsive checks, packaging, and iteration.
-- The human judges final visual quality. Local checks only confirm that the app can run, build, render, and remain usable on mobile.
+- Local checks confirm that the app can run, build, render, and remain usable on mobile.
 
 ## 3. App-First Route
 

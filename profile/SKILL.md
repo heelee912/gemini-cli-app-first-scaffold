@@ -17,9 +17,17 @@ Before generating or editing the artifact, read and follow the sibling file:
 - Treat static HTML and PDF as packaging or export formats, not the normal implementation medium.
 - Preserve the user's task. Do not wrap it in taste-level constraints unless the user supplied those constraints.
 - Let the design worker own visual direction.
-- Verify through build and rendered screenshots. Do not use fake pass/fail design scoring.
+- Verify through install, lint, build, packaging, and the browser tools available in the host agent environment.
 
 ## Scaffold Command
+
+Preferred one-shot command when Gemini CLI is installed:
+
+```bash
+python scripts/run_gemini_design_once.py out/my-artifact --name "My Artifact" --brief-file brief.md --force
+```
+
+Manual scaffold command:
 
 ```bash
 python scripts/create_build_like_web_app.py out/my-artifact --name "My Artifact" --brief-file brief.md --force
@@ -32,10 +40,4 @@ Then run your preferred design worker in the generated artifact folder.
 ```bash
 npm run build
 python scripts/package_vite_dist_single_html.py out/my-artifact/dist out/my-artifact/standalone.html
-```
-
-## Screenshot Command
-
-```bash
-node scripts/capture_chrome_cdp_fullpage.mjs "file:///absolute/path/to/standalone.html" out/my-artifact/captures --settle-ms 5000
 ```

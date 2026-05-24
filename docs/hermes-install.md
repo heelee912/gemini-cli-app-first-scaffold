@@ -2,9 +2,25 @@
 
 This repository can be used beside Hermes WebUI without modifying Hermes core.
 
-## Option A: Use As A Reference Skill
+## Option A: Install The Profile
 
-Copy the `profile/` folder into your Hermes skill or profile area and name it `build-parity-design-director`.
+Run:
+
+```bash
+python scripts/install_hermes_profile.py --hermes-home /path/to/.hermes-home --profile design --force
+```
+
+On Windows:
+
+```powershell
+python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home --profile design --force
+```
+
+This copies `profile/` into:
+
+```text
+<hermes-home>/profiles/design/skills/build-parity-design-director
+```
 
 The important files are:
 
@@ -14,22 +30,33 @@ The important files are:
 - `prompt-seeds/`
 - `source-prompts/README.md`
 
-## Option B: Use As An External Scaffold
+## Option B: Use As An External Runner
 
 Keep this repository separate and call its scripts from Hermes tasks:
+
+```bash
+python /path/to/gemini-build-parity-scaffold/scripts/run_gemini_design_once.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
+```
+
+This creates the scaffold, runs Gemini CLI inside the artifact folder, then runs
+lint, build, and standalone packaging.
+
+If Hermes already manages Gemini delegation itself, use the manual scaffold
+command instead:
 
 ```bash
 python /path/to/gemini-build-parity-scaffold/scripts/create_build_like_web_app.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
 ```
 
-Then ask the design worker to operate inside the generated artifact folder.
+Then ensure the Gemini worker executes from `/path/to/artifact`, not from the
+repository root.
 
-## Browser Verification
+## Browser Use
 
-For local artifacts, use CDP screenshots:
+This repository does not ship a browser-control backend. Use the browser tools
+already available in your agent environment to open the generated
+`standalone.html` or Vite preview.
 
-```bash
-node /path/to/gemini-build-parity-scaffold/scripts/capture_chrome_cdp_fullpage.mjs "file:///absolute/path/to/standalone.html" /path/to/captures --settle-ms 5000
-```
-
-For logged-in real browser tabs, use your environment's official browser-control backend and follow its tab-claiming rules. Do not mix local preview verification with account-page automation.
+For logged-in real browser tabs, use your environment's official browser-control
+backend and follow its tab-claiming rules. Do not mix local preview checks with
+account-page automation.
