@@ -10,17 +10,19 @@
 
 直接提示 Gemini CLI 时，结果很容易退化成一个静态 HTML 文件。本仓库让 worker 先在真实前端项目中工作，再在应用成立之后导出 HTML。
 
-| 路径快照 | 公开安全输出 |
+此表中的输出均为同一份公开安全 brief 的 one-shot 结果。
+
+| 路径 | One-shot 公开安全输出 |
 | --- | --- |
-| Near-baseline 1818 snapshot。有一些指令上下文，但 app-first scaffold 尚未稳定。 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="1818 near-baseline snapshot" width="360"> |
-| Near-baseline 1848 snapshot。首屏稳定性有所改善，但路径仍然偏向静态输出。 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="1848 near-baseline snapshot" width="360"> |
-| 0003 app-first route。Gemini 在 scaffold 内部工作，并在 HTML 打包前生成更丰富的应用状态。 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="0003 app-first output" width="360"> |
+| Vanilla 简单指令 v1 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="Vanilla 简单指令 v1 one-shot output" width="520"> |
+| Vanilla 简单指令 v2 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="Vanilla 简单指令 v2 one-shot output" width="520"> |
+| Build-parity scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
 
 ## 0003 交互
 
 最终产物不是静态页面。点击按钮会切换整个 view context，并展示不同的应用状态。
 
-<img src="../evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="720">
+<img src="../evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="900">
 
 所有图片都使用虚构内容。它们用于说明工作流效果。
 

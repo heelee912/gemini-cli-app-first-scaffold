@@ -10,17 +10,19 @@ Gemini CLI と Hermes のデザインワーカーを、AI Studio Build に近い
 
 Gemini CLI に直接依頼すると、結果は静的な HTML ファイル 1 つに寄りやすくなります。このリポジトリでは、まず実際のフロントエンドプロジェクト内で作業させ、アプリが成立したあとに HTML として出力します。
 
-| 経路 | 公開安全な出力 |
+この表の出力は、すべて同じ公開安全 brief に対する one-shot 結果です。
+
+| 経路 | One-shot の公開安全出力 |
 | --- | --- |
-| Near-baseline 1818 snapshot。一部の指示文脈はありましたが、アプリ優先 scaffold はまだ安定していませんでした。 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="1818 near-baseline snapshot" width="360"> |
-| Near-baseline 1848 snapshot。初期表示は改善しましたが、まだ静的出力に寄りすぎていました。 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="1848 near-baseline snapshot" width="360"> |
-| 0003 app-first route。Gemini は scaffold 内で作業し、HTML パッケージ化の前により豊かなアプリ状態を作ります。 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="0003 app-first output" width="360"> |
+| バニラ単純指示 v1 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="バニラ単純指示 v1 one-shot output" width="520"> |
+| バニラ単純指示 v2 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="バニラ単純指示 v2 one-shot output" width="520"> |
+| Build-parity scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
 
 ## 0003 のインタラクション
 
 最終成果物は静的ページではありません。ボタン操作により view context 全体が切り替わり、異なるアプリ状態が表示されます。
 
-<img src="../evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="720">
+<img src="../evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="900">
 
 すべての画像は架空データを使用しています。ワークフローの実効性を示すためのものです。
 

@@ -15,17 +15,19 @@ It gives the model a better working medium: a real Vite app, local design instru
 
 Plain CLI prompting often collapses into one static HTML file. This repository makes the worker operate inside a real frontend project first, then exports the result only after the app exists.
 
-| Route snapshot | Public-safe output |
+All outputs in this table are one-shot results from the same public-safe brief.
+
+| Route | One-shot public-safe output |
 | --- | --- |
-| Near-baseline 1818 snapshot. Some instruction context existed, but the app-first scaffold was not stable yet. | <img src="evidence/baseline-1818/desktop-fullpage.png" alt="1818 near-baseline snapshot" width="360"> |
-| Near-baseline 1848 snapshot. Visible first paint improved, but the route was still too static-output oriented. | <img src="evidence/baseline-1848/desktop-fullpage.png" alt="1848 near-baseline snapshot" width="360"> |
-| 0003 app-first route. Gemini works inside the scaffold and produces richer app state before HTML packaging. | <img src="evidence/final-0003/desktop-fullpage.png" alt="0003 app-first output" width="360"> |
+| Vanilla simple instruction v1 | <img src="evidence/baseline-1818/desktop-fullpage.png" alt="Vanilla simple instruction v1 one-shot output" width="520"> |
+| Vanilla simple instruction v2 | <img src="evidence/baseline-1848/desktop-fullpage.png" alt="Vanilla simple instruction v2 one-shot output" width="520"> |
+| Build-parity scaffold 0003 | <img src="evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
 
 ### 0003 Interaction Proof
 
 The final artifact is not just a static page. Controls change the whole view context and expose different app states.
 
-<img src="evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="720">
+<img src="evidence/final-0003/interaction-demo.gif" alt="0003 interaction demo" width="900">
 
 All images use fictional content. They document the practical effect of the workflow.
 
