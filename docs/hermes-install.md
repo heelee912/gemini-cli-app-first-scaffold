@@ -19,7 +19,7 @@ python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home -
 This copies `profile/` into:
 
 ```text
-<hermes-home>/profiles/design/skills/build-parity-design-director
+<hermes-home>/profiles/design/skills/app-first-design-director
 ```
 
 The important files are:
@@ -35,7 +35,7 @@ The important files are:
 Keep this repository separate and call its scripts from Hermes tasks:
 
 ```bash
-python /path/to/gemini-build-parity-scaffold/scripts/run_gemini_design_once.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
+python /path/to/gemini-cli-app-first-scaffold/scripts/run_gemini_design_once.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
 ```
 
 This creates the scaffold, runs Gemini CLI inside the artifact folder, then runs
@@ -45,7 +45,7 @@ If Hermes already manages Gemini delegation itself, use the manual scaffold
 command instead:
 
 ```bash
-python /path/to/gemini-build-parity-scaffold/scripts/create_build_like_web_app.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
+python /path/to/gemini-cli-app-first-scaffold/scripts/create_build_like_web_app.py /path/to/artifact --name "Artifact" --brief-file /path/to/brief.md --force
 ```
 
 Then ensure the Gemini worker executes from `/path/to/artifact`, not from the
@@ -56,7 +56,7 @@ repository root.
 Use this shape when delegating a visual web artifact:
 
 ```text
-Use the build-parity-design-director profile.
+Use the app-first-design-director profile.
 Create the artifact workspace with run_gemini_design_once.py.
 Run Gemini from inside the generated artifact workspace.
 Do not ask Gemini to answer with a single HTML file first.

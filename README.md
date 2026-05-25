@@ -1,4 +1,4 @@
-# Gemini Build Parity Scaffold
+# Gemini CLI App-First Scaffold
 
 Runnable app-first scaffolding for pushing Gemini CLI and Hermes design workers toward AI Studio Build-like frontend artifacts.
 
@@ -21,7 +21,7 @@ All outputs in this table are one-shot results from the same public-safe brief.
 | --- | --- |
 | Vanilla simple instruction v1 | <img src="evidence/baseline-1818/desktop-fullpage.png" alt="Vanilla simple instruction v1 one-shot output" width="520"> |
 | Vanilla simple instruction v2 | <img src="evidence/baseline-1848/desktop-fullpage.png" alt="Vanilla simple instruction v2 one-shot output" width="520"> |
-| Build-parity scaffold 0003 | <img src="evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
+| App-first scaffold 0003 | <img src="evidence/final-0003/desktop-fullpage.png" alt="App-first scaffold 0003 one-shot output" width="520"> |
 
 ### 0003 Interaction Proof
 
@@ -34,8 +34,8 @@ All images use fictional content. They document the practical effect of the work
 ## Quick Start For Gemini CLI
 
 ```powershell
-git clone https://github.com/heelee912/gemini-build-parity-scaffold.git
-cd gemini-build-parity-scaffold
+git clone https://github.com/heelee912/gemini-cli-app-first-scaffold.git
+cd gemini-cli-app-first-scaffold
 python scripts\run_gemini_design_once.py out\fictional-profile --name "Fictional Profile" --brief-file examples\fictional-recruiter-profile\brief.md --force
 ```
 
@@ -97,13 +97,13 @@ python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home -
 It copies this repository's profile into:
 
 ```text
-<hermes-home>\profiles\design\skills\build-parity-design-director
+<hermes-home>\profiles\design\skills\app-first-design-director
 ```
 
 Then a Hermes main agent can use the profile in either of these ways:
 
 ```text
-Use the build-parity-design-director profile.
+Use the app-first-design-director profile.
 Create an artifact workspace with run_gemini_design_once.py.
 Run the Gemini design worker inside that artifact workspace.
 Return the runnable source path and standalone.html path.

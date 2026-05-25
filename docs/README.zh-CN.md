@@ -1,4 +1,4 @@
-# Gemini Build Parity Scaffold
+# Gemini CLI App-First Scaffold
 
 面向 Gemini CLI 和 Hermes 设计 worker 的应用优先脚手架，用来更接近 AI Studio Build 风格的前端产物。
 
@@ -16,7 +16,7 @@
 | --- | --- |
 | Vanilla 简单指令 v1 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="Vanilla 简单指令 v1 one-shot output" width="520"> |
 | Vanilla 简单指令 v2 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="Vanilla 简单指令 v2 one-shot output" width="520"> |
-| Build-parity scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
+| App-first scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="App-first scaffold 0003 one-shot output" width="520"> |
 
 ## 0003 交互
 
@@ -29,8 +29,8 @@
 ## Gemini CLI 快速开始
 
 ```powershell
-git clone https://github.com/heelee912/gemini-build-parity-scaffold.git
-cd gemini-build-parity-scaffold
+git clone https://github.com/heelee912/gemini-cli-app-first-scaffold.git
+cd gemini-cli-app-first-scaffold
 python scripts\run_gemini_design_once.py out\fictional-profile --name "Fictional Profile" --brief-file examples\fictional-recruiter-profile\brief.md --force
 ```
 
@@ -92,13 +92,13 @@ python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home -
 安装位置：
 
 ```text
-<hermes-home>\profiles\design\skills\build-parity-design-director
+<hermes-home>\profiles\design\skills\app-first-design-director
 ```
 
 Hermes 主 agent 可以按以下方式使用：
 
 ```text
-使用 build-parity-design-director profile。
+使用 app-first-design-director profile。
 用 run_gemini_design_once.py 创建 artifact 工作区。
 在生成的 artifact 工作区内运行 Gemini 设计 worker。
 返回可运行源码路径和 standalone.html 路径。

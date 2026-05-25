@@ -21,7 +21,7 @@ PROFILE_ROOT = REPO_ROOT / "profile"
 
 
 PACKAGE_JSON = {
-    "name": "build-parity-app",
+    "name": "app-first-scaffold-app",
     "private": True,
     "version": "0.0.0",
     "type": "module",
@@ -186,7 +186,7 @@ coverage/
 
 METADATA_JSON = {
     "name": "",
-    "description": "Build parity generated web application.",
+    "description": "App-first scaffold generated web application.",
     "requestFramePermissions": [],
     "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"],
 }
@@ -249,7 +249,7 @@ The presence of a dependency means it is available when the brief benefits from 
 """
 
 
-README = """# Generated Build-Parity App
+README = """# Generated App-First Scaffold App
 
 Install and build:
 
@@ -267,7 +267,7 @@ python ../../scripts/package_vite_dist_single_html.py dist standalone.html
 """
 
 
-TASK = """# Build-Parity App Task
+TASK = """# App-First Scaffold Task
 
 App name: {app_name}
 
@@ -287,7 +287,7 @@ The scaffold intentionally provides app structure without a concrete visual seed
 
 def safe_name(name: str) -> str:
     value = re.sub(r"[^a-zA-Z0-9_-]+", "-", name.strip().lower()).strip("-")
-    return value or "build-parity-app"
+    return value or "app-first-scaffold-app"
 
 
 def write_text(path: Path, text: str, force: bool) -> None:
@@ -365,9 +365,9 @@ def create(root: Path, app_name: str, brief: str, force: bool) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Create a Build-parity Vite React scaffold.")
+    parser = argparse.ArgumentParser(description="Create an app-first Vite React scaffold.")
     parser.add_argument("root", help="target artifact directory")
-    parser.add_argument("--name", default="Build Parity App", help="app display name")
+    parser.add_argument("--name", default="App-First Scaffold App", help="app display name")
     parser.add_argument("--brief", default="", help="brief text")
     parser.add_argument("--brief-file", help="file containing brief text")
     parser.add_argument("--force", action="store_true", help="overwrite existing files")
@@ -384,7 +384,7 @@ def main() -> int:
     if args.build:
         run(["npm", "run", "build"], root)
 
-    print(f"created Build-parity scaffold: {root}")
+    print(f"created app-first scaffold: {root}")
     return 0
 
 

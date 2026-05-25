@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a scaffold, run Gemini CLI inside it, then verify and package.
+"""Create an app-first scaffold, run Gemini CLI inside it, then verify and package.
 
 This is the drop-in route for users who want the prepared scaffold and
 instruction kernel to be visible to Gemini automatically.
@@ -19,7 +19,7 @@ from create_build_like_web_app import create
 DEFAULT_MODEL = "gemini-3-flash-preview"
 
 
-WORKER_PROMPT = """You are executing inside a prepared Build-parity Vite/React/Tailwind project.
+WORKER_PROMPT = """You are executing inside a prepared app-first Vite/React/Tailwind project.
 
 Read these local files before editing:
 
@@ -79,7 +79,7 @@ def read_brief(args: argparse.Namespace) -> str:
 
 
 def run_gemini(root: Path, gemini: str, model: str, timeout_seconds: int) -> None:
-    prompt_path = root / "build_parity_worker_prompt.md"
+    prompt_path = root / "app_first_worker_prompt.md"
     prompt_path.write_text(WORKER_PROMPT, encoding="utf-8", newline="\n")
     prompt = WORKER_PROMPT
     executable = resolve_command(gemini)
@@ -113,7 +113,7 @@ def package(root: Path) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run one Gemini design pass in a Build-parity scaffold.")
+    parser = argparse.ArgumentParser(description="Run one Gemini design pass in an app-first scaffold.")
     parser.add_argument("root", help="target artifact directory")
     parser.add_argument("--name", required=True, help="app display name")
     parser.add_argument("--brief", default="", help="brief text")

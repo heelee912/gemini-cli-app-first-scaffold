@@ -1,4 +1,4 @@
-# Gemini Build Parity Scaffold
+# Gemini CLI App-First Scaffold
 
 Gemini CLI と Hermes のデザインワーカーを、AI Studio Build に近いフロントエンド成果物へ寄せるための、アプリ優先スキャフォールドです。
 
@@ -16,7 +16,7 @@ Gemini CLI に直接依頼すると、結果は静的な HTML ファイル 1 つ
 | --- | --- |
 | バニラ単純指示 v1 | <img src="../evidence/baseline-1818/desktop-fullpage.png" alt="バニラ単純指示 v1 one-shot output" width="520"> |
 | バニラ単純指示 v2 | <img src="../evidence/baseline-1848/desktop-fullpage.png" alt="バニラ単純指示 v2 one-shot output" width="520"> |
-| Build-parity scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="Build-parity scaffold 0003 one-shot output" width="520"> |
+| App-first scaffold 0003 | <img src="../evidence/final-0003/desktop-fullpage.png" alt="App-first scaffold 0003 one-shot output" width="520"> |
 
 ## 0003 のインタラクション
 
@@ -29,8 +29,8 @@ Gemini CLI に直接依頼すると、結果は静的な HTML ファイル 1 つ
 ## Gemini CLI クイックスタート
 
 ```powershell
-git clone https://github.com/heelee912/gemini-build-parity-scaffold.git
-cd gemini-build-parity-scaffold
+git clone https://github.com/heelee912/gemini-cli-app-first-scaffold.git
+cd gemini-cli-app-first-scaffold
 python scripts\run_gemini_design_once.py out\fictional-profile --name "Fictional Profile" --brief-file examples\fictional-recruiter-profile\brief.md --force
 ```
 
@@ -92,13 +92,13 @@ python scripts\install_hermes_profile.py --hermes-home C:\path\to\.hermes-home -
 インストール先:
 
 ```text
-<hermes-home>\profiles\design\skills\build-parity-design-director
+<hermes-home>\profiles\design\skills\app-first-design-director
 ```
 
 Hermes のメインエージェントは、次の形で使用できます。
 
 ```text
-build-parity-design-director profile を使用する。
+app-first-design-director profile を使用する。
 run_gemini_design_once.py で artifact 作業環境を作成する。
 生成された artifact 作業環境内で Gemini デザインワーカーを実行する。
 実行可能な source path と standalone.html path を返す。

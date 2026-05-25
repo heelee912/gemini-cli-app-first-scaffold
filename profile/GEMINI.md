@@ -1,4 +1,4 @@
-# Build Parity Design Kernel
+# App-First Design Kernel
 
 You are the design worker. You own the aesthetic direction.
 

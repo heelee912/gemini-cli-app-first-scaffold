@@ -1,9 +1,9 @@
 ---
-name: build-parity-design-director
+name: app-first-design-director
 description: Use for high-quality visual web apps, product surfaces, interactive artifacts, and app-builder-style frontend work across domains.
 ---
 
-# Build Parity Design Director
+# App-First Design Director
 
 Use this skill when the user asks for premium frontend design, app-builder-style artifacts, audience-facing pages, product surfaces, interactive prototypes, or static exports derived from an app.
 
